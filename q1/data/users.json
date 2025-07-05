@@ -1,0 +1,38 @@
+{
+    "debug_user": {
+        "password": "password",
+        "address": "Debug Street",
+        "phone": "555-DEBUG",
+        "order_history": [
+            "88ff16ce-164f-4f1d-ba87-5715aca70440"
+        ]
+    },
+    "customer": {
+        "password": "password",
+        "address": "123 Customer St",
+        "phone": "555-1234",
+        "order_history": [
+            "595818fd-47d7-4e55-8a1c-c158c8c27f4c"
+        ]
+    },
+    "admin": {
+        "password": "admin123",
+        "address": "456 Admin Ave",
+        "phone": "555-5678",
+        "order_history": []
+    },
+    "test_user": {
+        "password": "password",
+        "address": "789 Test Blvd",
+        "phone": "555-9012",
+        "order_history": [
+            "d4ef857b-2223-47bb-8935-2d6bdda8c42f"
+        ]
+    },
+    "another_user": {
+        "password": "password",
+        "address": "Another Address",
+        "phone": "555-ANOTHER",
+        "order_history": []
+    }
+}

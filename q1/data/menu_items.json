@@ -1,0 +1,52 @@
+{
+    "a26185d4-a1e4-4361-9bed-f702477b5dc4": {
+        "name": "Debug Pizza",
+        "price": 9.99,
+        "preparation_time": 10
+    },
+    "8b53fa8d-d6e6-4077-b14e-acc75d4bae09": {
+        "name": "Margherita Pizza",
+        "price": 12.99,
+        "preparation_time": 15
+    },
+    "64f4ad69-465e-4400-8f5a-414389232bee": {
+        "name": "Pepperoni Pizza",
+        "price": 14.99,
+        "preparation_time": 15
+    },
+    "3158f73b-df42-4a76-8f9c-40c891472df0": {
+        "name": "Veggie Burger",
+        "price": 9.99,
+        "preparation_time": 10
+    },
+    "67d88c1e-5d74-4118-be4c-4e41f3529867": {
+        "name": "Chicken Burger",
+        "price": 11.99,
+        "preparation_time": 12
+    },
+    "03461862-92c4-402d-82db-2f3286a5e12f": {
+        "name": "Caesar Salad",
+        "price": 7.99,
+        "preparation_time": 5
+    },
+    "a0de8972-a043-46f4-a721-a0338596159c": {
+        "name": "Greek Salad",
+        "price": 8.99,
+        "preparation_time": 5
+    },
+    "2b2b65b9-1ec1-4837-87e8-82ce8a149ba2": {
+        "name": "French Fries",
+        "price": 3.99,
+        "preparation_time": 8
+    },
+    "559291e3-5f1c-4453-ae29-ec9b63a49318": {
+        "name": "Soda",
+        "price": 1.99,
+        "preparation_time": 1
+    },
+    "f26ae4fc-d5db-40c5-aa6c-a92a0c2a630d": {
+        "name": "Ice Cream",
+        "price": 4.99,
+        "preparation_time": 3
+    }
+}

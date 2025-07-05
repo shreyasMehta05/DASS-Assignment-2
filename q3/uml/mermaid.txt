@@ -1,0 +1,138 @@
+classDiagram
+    %% Abstract base class for all customer types
+    class Customer {
+        <<abstract>>
+        +customer_id: int
+        +login_id: string
+        +secret_key: string
+        +shipping_location: string
+        +client_category: string
+        +purchase_history: list
+        +authenticate(provided_key): bool
+        +end_session(): bool
+        +modify_profile(attribute, updated_value): bool
+    }
+    
+    %% Personal client implementation
+    class PersonalClient {
+        +display_name: string
+        +place_in_basket(item, quantity, basket): bool
+        +validate_voucher(voucher_code, vouchers): Voucher
+    }
+    
+    %% Business client implementation
+    class BusinessClient {
+        +business_name: string
+        +tax_id: string
+        +place_bulk_order(item, quantity, basket): bool
+        +validate_voucher(voucher_code, vouchers): Voucher
+    }
+    
+    %% Product and inventory management
+    class Item {
+        +item_id: int
+        +title: string
+        +details: string
+        +cost: float
+        +classification: string
+        +inventory_count: int
+        +verify_availability(quantity): bool
+        +reduce_inventory(quantity): bool
+    }
+    
+    %% Search functionality
+    class ItemFinder {
+        <<static>>
+        +find_by_text(items, query): list
+        +find_by_price_range(items, min_cost, max_cost): list
+        +find_by_classification(items, classification): list
+    }
+    
+    %% Cart management
+    class ShoppingBasket {
+        +baskets: dict
+        +add_product(customer_id, item, quantity): bool
+        +remove_product(customer_id, item_id): bool
+        +checkout(customer, payment_method, discount): Purchase
+        +get_basket_value(customer_id): float
+        +get_basket_contents(customer_id): list
+    }
+    
+    %% Order management
+    class Purchase {
+        +purchase_id: int
+        +customer: Customer
+        +products_and_quantities: list
+        +original_cost: float
+        +final_cost: float
+        +status: string
+        +purchase_date: datetime
+        +shipment: Shipment
+        +get_original_cost(): float
+        +apply_additional_discount(discount_amount): float
+    }
+    
+    %% Shipment tracking
+    class Shipment {
+        +shipment_id: int
+        +purchase_id: int
+        +purchase: Purchase
+        +status: string
+        +arrival_date: datetime
+        +tracking_code: string
+        +get_status(): dict
+        +update_status(new_status): bool
+        -_auto_update_status(): void
+    }
+    
+    %% Payment processing
+    class Transaction {
+        +transaction_id: int
+        +amount: float
+        +method: string
+        +status: string
+        +create_receipt(): string
+        +process_payment(payment_details): bool
+    }
+    
+    %% Discount handling
+    class Voucher {
+        +code: string
+        +discount_percent: float
+        +expiry_date: datetime
+        +is_valid(): bool
+        +calculate_discount(total_cost): float
+    }
+    
+    %% Relationships with multiplicity
+    
+    %% Inheritance relationships
+    Customer <|-- PersonalClient : inherits
+    Customer <|-- BusinessClient : inherits
+    
+    %% Composition relationships
+    Purchase "1" *-- "1" Shipment : creates
+    
+    %% Association relationships
+    Customer "1" o-- "0..*" Purchase : has
+    Purchase "1" o-- "1..*" Item : contains
+    Purchase "1" -- "1" Transaction : processes
+    
+    %% Usage relationships
+    PersonalClient "1" --> "1" ShoppingBasket : uses
+    BusinessClient "1" --> "1" ShoppingBasket : uses
+    Customer "1" --> "0..*" Voucher : validates
+    ShoppingBasket "1" --> "0..*" Purchase : creates
+    Item "0..*" --o "1" ShoppingBasket : stored in
+    
+    %% Styling for black & white theme
+    style Customer fill:#ffffff,stroke:#000000,stroke-width:1px
+    style PersonalClient fill:#ffffff,stroke:#000000,stroke-width:1px
+    style BusinessClient fill:#ffffff,stroke:#000000,stroke-width:1px
+    style Item fill:#ffffff,stroke:#000000,stroke-width:1px
+    style ItemFinder fill:#ffffff,stroke:#000000,stroke-width:1px
+    style ShoppingBasket fill:#ffffff,stroke:#000000,stroke-width:1px
+    style Purchase fill:#ffffff,stroke:#000000,stroke-width:1px
+    style Shipment fill:#ffffff,stroke:#000000,stroke-width:1px
+    style Transaction fill:#ffffff,stroke:#000000,stroke-width:1px
+    style Voucher fill:#ffffff,stroke:#000000,stroke-width:1px

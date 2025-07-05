@@ -1,0 +1,22 @@
+{
+    "agent": {
+        "password": "password",
+        "phone": "555-1111",
+        "available": true,
+        "current_orders": [
+            "595818fd-47d7-4e55-8a1c-c158c8c27f4c"
+        ]
+    },
+    "agent2": {
+        "password": "password",
+        "phone": "555-2222",
+        "available": true,
+        "current_orders": []
+    },
+    "agent3": {
+        "password": "password",
+        "phone": "555-3333",
+        "available": true,
+        "current_orders": []
+    }
+}

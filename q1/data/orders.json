@@ -1,0 +1,55 @@
+{
+    "88ff16ce-164f-4f1d-ba87-5715aca70440": {
+        "customer_username": "debug_user",
+        "items": [
+            {
+                "menu_item_id": "a26185d4-a1e4-4361-9bed-f702477b5dc4",
+                "quantity": 1
+            }
+        ],
+        "delivery_mode": "Takeaway",
+        "delivery_address": null,
+        "status": "Placed",
+        "creation_time": "2025-03-09T20:07:53.290680",
+        "estimated_completion_time": "2025-03-09T20:17:53.290680",
+        "assigned_delivery_agent": null
+    },
+    "d4ef857b-2223-47bb-8935-2d6bdda8c42f": {
+        "customer_username": "test_user",
+        "items": [
+            {
+                "menu_item_id": "8b53fa8d-d6e6-4077-b14e-acc75d4bae09",
+                "quantity": 1
+            },
+            {
+                "menu_item_id": "559291e3-5f1c-4453-ae29-ec9b63a49318",
+                "quantity": 2
+            }
+        ],
+        "delivery_mode": "Takeaway",
+        "delivery_address": null,
+        "status": "Placed",
+        "creation_time": "2025-03-09T20:10:27.493286",
+        "estimated_completion_time": "2025-03-09T20:25:27.493286",
+        "assigned_delivery_agent": null
+    },
+    "595818fd-47d7-4e55-8a1c-c158c8c27f4c": {
+        "customer_username": "customer",
+        "items": [
+            {
+                "menu_item_id": "2b2b65b9-1ec1-4837-87e8-82ce8a149ba2",
+                "quantity": 2
+            },
+            {
+                "menu_item_id": "559291e3-5f1c-4453-ae29-ec9b63a49318",
+                "quantity": 1
+            }
+        ],
+        "delivery_mode": "Home Delivery",
+        "delivery_address": "123 Customer St",
+        "status": "Placed",
+        "creation_time": "2025-03-09T20:10:27.493656",
+        "estimated_completion_time": "2025-03-09T20:48:27.493656",
+        "assigned_delivery_agent": "agent"
+    }
+}

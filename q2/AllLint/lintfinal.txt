@@ -1,0 +1,8 @@
+************* Module gobbletfinal
+AllLint/gobbletfinal.py:331:0: C0301: Line too long (101/100) (line-too-long)
+AllLint/gobbletfinal.py:388:4: R0914: Too many local variables (17/15) (too-many-locals)
+AllLint/gobbletfinal.py:459:4: R0914: Too many local variables (17/15) (too-many-locals)
+
+-----------------------------------
+Your code has been rated at 9.91/10
+
